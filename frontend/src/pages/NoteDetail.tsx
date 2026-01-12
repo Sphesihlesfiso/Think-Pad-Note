@@ -1,7 +1,6 @@
-const NoteDetail = () => {
+
+export const NoteDetail = () => {
   return (
     <div>NoteDetail</div>
   )
 }
-
-export default NoteDetail

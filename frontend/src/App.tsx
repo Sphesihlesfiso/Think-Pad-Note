@@ -1,16 +1,19 @@
-import { Route, Routes } from "react-router";
-import HomePage from "./pages/HomePage";
-import CreatePage from "./pages/CreatePage";
-import NoteDetail from "./pages/NoteDetail";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Home } from "./Pages/Home";
+import { CreatePage } from "./Pages/CreatePage";
+import { Route, Routes } from "react-router-dom";
+import { NoteDetail } from "./Pages/NoteDetail";
 
-export default function App() {
+function App() {
   return (
-    <div>
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreatePage />} />
-        <Route path="/note/:id" element={<NoteDetail />} />
+        <Route path="/node/:id" element={<NoteDetail />} />
       </Routes>
-    </div>
+    </ThemeProvider>
   );
 }
+
+export default App;
